@@ -9,7 +9,7 @@
         * UR-2.3.1: Title text input (single line)
         * UR-2.3.2: Modified date input (read-only, and auto-filled)
         * UR-2.3.3: Main text input (multiple lines)
-        * UR-2.3.4: Tag input (multiple selectable items)
+        * UR-2.3.4: Tag input (either select from multiple selectable items, or entering new one)
         * UR-2.3.5: Image input (File load from local host, multiple images shall be supported)
     * UR-2.4: List of Diary Entries:
         * UR-2.4.1: Following filters shall be available:
@@ -22,6 +22,7 @@
 ## User Management Requirements
 * UMR-1: Users are identified by their e-mail address.
 * UMR-2: Each user shall have separate data storage for their data.
+    * UMR-2.1: So that any user cannot access any other user's data.
 * UMR-3: User information shall be protected with simple password support.
 * UMR-4: User has no settings.
 
@@ -35,7 +36,7 @@
         * DR-3.1.1: Title is single line.
         * DR-3.1.2: Title shall be less than 256 characters.
     * DR-3.2: Main text
-        * DR-3.2.1: Main text shall supoort multiple lines.
+        * DR-3.2.1: Main text shall support multiple lines.
         * DR-3.2.2: And no maximum character limit.
     * DR-3.3: Modified date
         * DR-3.3.1: Modified data shall be generated from system time.
