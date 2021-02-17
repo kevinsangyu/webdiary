@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Webdiary</title>
-</head>
-<body>
-    <h1>This is the main page for the list of existing diary entries</h1>
+{% extends 'base_template.html' %}
+{% block content %}
+<h1>This is the main page for the list of existing diary entries</h1>
     <div class="entries">
         {% for entry in entries %}
             <div class="entry">
                 <h2><a href="to_be_implemented">{{ entry.title }}</a></h2>
-                <p>{{ entry.body }}</p>
+                <p>{{ entry.snippet }}</p>
                 <p>{{ entry.date_created }}</p>
             </div>
         {% endfor %}
     </div>
-</body>
-</html>
+{% endblock %}

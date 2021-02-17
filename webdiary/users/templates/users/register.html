@@ -1,17 +1,12 @@
-<html>
-	<head>
-		<title>Webdiary-register</title>
-	</head>
-	<body>
-		<label>Email: </label><br>
-		<input type="text" id="email"><br>
-		<label>Password: </label><br>
-		<input type="text" id="pwd"><br>
-		<label>Confirm password: </label><br>
-		<input type="text" id="conf"><br><br>
-		<button id="register">Register</button>
-		<script src="register.js">
-		
-		</script>
-	</body>
-</html>
+{% extends 'base_template.html' %}
+{% block content %}
+{% load static %}
+<label>Email: </label><br>
+<input type="text" id="email"><br>
+<label>Password: </label><br>
+<input type="text" id="pwd"><br>
+<label>Confirm password: </label><br>
+<input type="text" id="conf"><br><br>
+<button id="register">Register</button>
+<script src="{% static 'register.js' %}"></script>
+{% endblock %}
