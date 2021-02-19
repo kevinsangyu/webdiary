@@ -1,0 +1,11 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<div class="entry_detail">
+    <div class="entry">
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.body }}</p>
+        <h3>{{ entry.date_created }}</h3>
+    </div>
+</div>
+{% endblock %}

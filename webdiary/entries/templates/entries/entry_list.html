@@ -4,7 +4,7 @@
     <div class="entries">
         {% for entry in entries %}
             <div class="entry">
-                <h2><a href="to_be_implemented">{{ entry.title }}</a></h2>
+                <h2><a href="{% url 'detail' slug=entry.slug %}">{{ entry.title }}</a></h2>
                 <p>{{ entry.snippet }}</p>
                 <p>{{ entry.date_created }}</p>
             </div>

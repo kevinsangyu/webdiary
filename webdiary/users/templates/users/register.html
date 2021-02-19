@@ -1,12 +1,10 @@
 {% extends 'base_template.html' %}
 {% block content %}
 {% load static %}
-<label>Email: </label><br>
-<input type="text" id="email"><br>
-<label>Password: </label><br>
-<input type="text" id="pwd"><br>
-<label>Confirm password: </label><br>
-<input type="text" id="conf"><br><br>
-<button id="register">Register</button>
-<script src="{% static 'register.js' %}"></script>
+<h1>Register</h1>
+<form class="site-form" action="/users/register/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Register">
+</form>
 {% endblock %}
