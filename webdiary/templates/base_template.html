@@ -7,7 +7,25 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1><a href="{% url 'list' %}">Back to list</a></h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'list' %}">Back to list</a>
+            </li>
+            <li>
+                <a href="/users/login/">Login/Register</a>
+            </li>
+            <li>
+                <a href="/entries/new_entry/">New Entry</a>
+            </li>
+           <li>
+               <form class="logout-link" action="{% url 'logout' %}" method="post">
+                   {% csrf_token %}
+                   <button type="submit">Logout</button>
+               </form>
+           </li>
+        </ul>
+    </nav>
     {% block content %}
     {% endblock %}
 </body>

@@ -19,5 +19,6 @@ from . import views
 
 urlpatterns = [
     path('entry_list/', views.entry_list, name='list'),
+    path('new_entry/', views.new_entry, name='new'),
     path('<slug:slug>/', views.entry_detail, name='detail')
 ]
